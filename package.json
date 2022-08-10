@@ -1,0 +1,19 @@
+{
+  "name": "mai_sung",
+  "version": "1.0.0",
+  "description": "File transfer by MMao Official",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  },
+  "engines": {
+    "node": "16.16.0"
+  }
+}
