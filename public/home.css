@@ -68,3 +68,17 @@ nav .right a p{
     margin: 2px;
     color: #fff;
 }
+
+@media(max-width:711px){
+    nav .left a h1{
+        font-size: 27px;
+    }
+    nav .right a p{
+        display: none;
+    }
+}
+@media(max-width:588px){
+    nav{
+        justify-content: space-between;
+    }
+}
