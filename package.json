@@ -7,13 +7,22 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "",
+  "author": "Aon Mao",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
     "socket.io": "^4.5.1"
   },
   "engines": {
-    "node": "16.16.0"
-  }
+    "node": "16.15.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AonMao888/filetrans.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AonMao888/filetrans/issues"
+  },
+  "homepage": "https://github.com/AonMao888/filetrans#readme"
 }
