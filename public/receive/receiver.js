@@ -25,8 +25,7 @@
 
         let el = document.createElement("div");
         el.classList.add("item");
-        el.innerHTML = `<div class="prograss">0%</div>
-        <div class="filename">${metadata.filename}</div>`;
+        el.innerHTML = `<div class="filename">${metadata.filename}</div><div class="prograss">0%</div>`;
         document.querySelector(".file-list").appendChild(el);
 
         fileShare.prograss_node = el.querySelector(".prograss");
