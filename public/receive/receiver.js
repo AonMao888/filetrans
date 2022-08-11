@@ -14,6 +14,8 @@
             uid: joinID,
             sender_uid:senderID
         });
+        var sound = new Audio("../assets/sound-effect.mp3");
+        sound.play();
         document.querySelector(".join-screen").classList.remove("active");
         document.querySelector(".fs-screen").classList.add("active");
     });

@@ -6,7 +6,9 @@
     
     document.querySelector("#sender-start-con-btn").addEventListener("click",function(){
         let joinID = generateID;
-        document.querySelector("#join-id").innerHTML = `<h3>Room ID</h3><span>${joinID}</span><p>___ or ___</p><img src="https://chart.googleapis.com/chart?cht=qr&chl=${joinID}&chs=260x260&chld=L|0">`;
+        document.querySelector(".p").style.display = "none";
+        document.querySelector("#sender-start-con-btn").style.display = "none";
+        document.querySelector("#join-id").innerHTML = `<h3>Room ID</h3><span>${joinID}</span><p>___ or ___</p><img src="https://chart.googleapis.com/chart?cht=qr&chl=${joinID}&chs=260x260&chld=L|0"><p>Send Room Id to the receiver</p>`;
         socket.emit("sender-join",{
             uid: joinID
         });
@@ -15,6 +17,8 @@
             document.querySelector(".join-screen").classList.remove("active");
             document.querySelector(".fs-screen").classList.add("active");
             document.querySelector(".ani").style.display = "none";
+            var sound = new Audio("../assets/sound-effect.mp3");
+            sound.play();
         });
         document.querySelector("#file-input").addEventListener("change",function(e){
             let file = e.target.files[0];
