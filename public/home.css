@@ -40,7 +40,9 @@ nav .left a{
 }
 nav .left a img{
     height: 42px;
-    width: 99px;
+    width: 42px;
+    object-fit: cover;
+    object-position: center;
     margin-right: 5px;
 }
 nav .left a h1{
