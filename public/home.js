@@ -2,6 +2,8 @@ const menubtn = document.querySelector(".menubtn");
 const menu = document.querySelector(".menu");
 const menuclose = document.querySelector(".drawerclose");
 const banner = document.querySelector(".banner");
+const qr = document.querySelector(".qr");
+const qrclose = document.querySelector(".qrclose");
 
 menubtn.addEventListener("click",()=>{
     menu.style.left = "0";
@@ -16,4 +18,7 @@ window.addEventListener("scroll",()=>{
         menu.style.left = "-369px";
         menubtn.classList.remove("show");
     }
+})
+qrclose.addEventListener("click",()=>{
+    qr.remove();
 })

@@ -311,6 +311,9 @@ nav .right a p{
 }
 .foot .info h1{
     font-size: 23px;
+    background: linear-gradient(159deg,rgb(65, 193, 225),blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .foot .info h1 span{
     font-size: 19px;
@@ -319,6 +322,42 @@ nav .right a p{
     -webkit-text-fill-color: #fff;
     padding: 5px;
     border-radius: 5px;
+}
+.div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qr{
+    background: #fff;
+    border: 1px solid rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+}
+.qr i{
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    font-size: 17px;
+    color: dimgray;
+}
+.qr img{
+    width: 99px;
+    height: 99px;
+    user-select: none;
+}
+.qr p{
+    margin: 5px;
+    color: dimgray;
 }
 
 @media(max-width:1111px){
@@ -422,24 +461,68 @@ nav .right a p{
     .container .left h1{
         font-size: 7vw;
     }
-    .foot .info h1{
-        font-size: 23px;
+    .container .left p{
+        transform: translateY(9px);
     }
     .con{
-        flex-wrap: wrap;
+        width: 96%;
+        margin: 0 19px;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.242);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 2px dashed rgb(199, 199, 199);
+        flex-wrap: nowrap;
+        transform: translateY(63px);
     }
     .con a{
-        width: 123px;
+        width: 100%;
         height: 123px;
         flex-direction: column;
-        border-radius: 50%;
+        border-radius: 0;
         justify-content: center;
+    }
+    .con a:nth-child(1){
+        background: transparent;
+        border-right: 1px solid #fff;
+    }
+    .con a:nth-child(2){
+        background: transparent;
+        border-left: 1px solid #fff;
+    }
+    .con a:active{
+        transform: none;
+    }
+    .con a:hover{
+        box-shadow: none;
     }
     .con a span{
         font-size: 15px;
+        color: #000;
     }
     .con a img{
         width: 63px;
         height: 63px;
+    }
+    .div{
+        background: royalblue;
+        margin-bottom: 51px;
+    }
+    .container .left h1{
+        background: linear-gradient(159deg,#fff,#eee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .container .left p{
+        color: #eee;
+    }
+    .c{
+        display: none;
+    }
+    .foot .info h1{
+        font-size: 23px;
+        background: linear-gradient(159deg,rgb(65, 193, 225),blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
