@@ -17,7 +17,7 @@
             document.querySelector(".join-screen").classList.remove("active");
             document.querySelector(".fs-screen").classList.add("active");
             document.querySelector(".ani").style.display = "none";
-            var sound = new Audio("../assets/sound-effect.mp3");
+            var sound = new Audio("../assets/connect.mp3");
             sound.play();
         });
         document.querySelector("#file-input").addEventListener("change",function(e){

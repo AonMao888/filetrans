@@ -14,7 +14,7 @@
             uid: joinID,
             sender_uid:senderID
         });
-        var sound = new Audio("../assets/sound-effect.mp3");
+        var sound = new Audio("../assets/connect.mp3");
         sound.play();
         document.querySelector(".join-screen").classList.remove("active");
         document.querySelector(".fs-screen").classList.add("active");
@@ -43,6 +43,8 @@
         if(fileShare.transmitted == fileShare.metadata.total_buffer_size){
             download(new Blob(fileShare.buffer),fileShare.metadata.filename);
             fileShare = {};
+            var sound = new Audio("../assets/complete.mp3");
+            sound.play();
         }else{
             socket.emit("fs-start",{
                 uid:senderID
