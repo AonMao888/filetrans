@@ -6,7 +6,7 @@
     
     document.querySelector("#sender-start-con-btn").addEventListener("click",function(){
         let joinID = generateID;
-        document.querySelector("#join-id").innerHTML = `<h3>Group ID</h3><span>${joinID}</span>`;
+        document.querySelector("#join-id").innerHTML = `<h3>Room ID</h3><span>${joinID}</span><p>___ or ___</p><img src="https://chart.googleapis.com/chart?cht=qr&chl=${joinID}&chs=260x260&chld=L|0">`;
         socket.emit("sender-join",{
             uid: joinID
         });
@@ -14,6 +14,7 @@
             receiverID = uid;
             document.querySelector(".join-screen").classList.remove("active");
             document.querySelector(".fs-screen").classList.add("active");
+            document.querySelector(".ani").style.display = "none";
         });
         document.querySelector("#file-input").addEventListener("change",function(e){
             let file = e.target.files[0];
@@ -25,8 +26,7 @@
                 let buffer = new Uint8Array(reader.result);
                 let el = document.createElement("div");
                 el.classList.add("item");
-                el.innerHTML = `<div class="prograss">0%</div>
-                <div class="filename">${file.name}</div>`;
+                el.innerHTML = `<div class="filename">${file.name}</div><div class="prograss">0%</div>`;
                 document.querySelector(".file-list").appendChild(el);
                 shareFile({
                     filename:file.name,

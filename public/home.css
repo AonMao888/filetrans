@@ -3,12 +3,16 @@ body{
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 nav{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background: royalblue;
+    height: 59px;
 }
 nav .left{
     margin: 1px 9px;
@@ -16,10 +20,16 @@ nav .left{
     align-items: center;
 }
 nav .left i{
-    font-size: 23px;
+    font-size: 19px;
     color: #fff;
     margin: 3px 9px;
     cursor: pointer;
+    outline: none;
+    transform: scale(1);
+    transition: 0.5s;
+}
+nav .left i:active{
+    transform: scale(0.63);
 }
 nav .left a{
     text-decoration: none;
@@ -37,6 +47,15 @@ nav .left a h1{
     font-size: 29px;
     color: #fff;
     margin: 5px;
+    align-items: center;
+    text-align: center;
+}
+nav .left a h1 span{
+    font-size: 27px;
+    background: #fff;
+    color: royalblue;
+    padding: 5px 8px;
+    border-radius: 4px;
 }
 nav .right{
     display: flex;
@@ -50,6 +69,11 @@ nav .right a{
     text-decoration: none;
     margin: 1px 15px;
     transition: 0.5s;
+    transform: scale(1);
+    cursor: pointer;
+}
+nav .right a:active{
+    transform: scale(0.7);
 }
 nav .right a:nth-child(1){
     color: rgb(4, 255, 142);
@@ -68,7 +92,278 @@ nav .right a p{
     margin: 2px;
     color: #fff;
 }
+.container{
+    width: 100%;
+    height: calc(100vh - 63px);
+    display: flex;
+}
+.container .left{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 63px);
+    min-height: calc(100vh - 63px);
+    overflow-y: scroll;
+}
+.container .left h1{
+    width: max-content;
+    float: left;
+    font-size: 42px;
+    margin: 15px;
+    background: linear-gradient(159deg,rgb(65, 193, 225),blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container .left p{
+    width: 51%;
+    margin: 5px auto;
+    color: dimgray;
+    font-size: 19px;
+}
+.container .left h2{
+    margin: 9px auto;
+    margin-top: 51px;
+    width: max-content;
+    background: linear-gradient(159deg,rgb(102, 3, 148),rgb(65, 193, 225));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.con{
+    display: flex;
+    width: 96%;
+    margin: 5px auto;
+    justify-content: space-evenly;
+}
+.con a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 42%;
+    height: 151px;
+    background: linear-gradient(159deg,rgb(0, 204, 255),rgb(50, 0, 104));
+    border-radius: 9px;
+    user-select: none;
+    outline: none;
+    transform: scale(1);
+    transition: 0.1s;
+    padding: 1px 9px;
+}
+.con a:nth-child(1){
+    background: linear-gradient(159deg,rgb(79, 0, 163),rgb(1, 168, 209));
+}
+.con a:nth-child(2){
+    background: linear-gradient(159deg,rgb(0, 255, 26),rgb(0, 137, 168));
+}
+.con a:hover{
+    box-shadow: 3px 4px 5px rgba(1, 1, 1, 0.342);
+}
+.con a:active{
+    transform: scale(1.05);
+}
+.con a img{
+    width: 88px;
+    height: 88px;
+}
+.con a span h5{
+    margin: 3px;
+    color: #000;
+    font-weight: normal;
+}
+.con a span{
+    margin: 5px;
+    width: max-content;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 19px;
+}
+.container .right{
+    min-width: 272px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .right h3{
+    margin: 5px;
+    color: royalblue;
+}
+.container .right a{
+    width: 87%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 8px 11px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+.container .right a:nth-child(3){
+    color: royalblue;
+}
+.container .right a:nth-child(4){
+    color: #000;
+}
+.container .right a:nth-child(5){
+    color: teal;
+}
+.container .right a:hover{
+    transform: translateX(-9px);
+}
+.container .right a p{
+    margin: 5px;
+    color: dimgray;
+}
+.container .right .h{
+    background: url("https://raw.githubusercontent.com/AonMao888/fontimg/main/send.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 96%;
+    height: 111px;
+    margin: 3px;
+    border-radius: 5px;
+    display: none;
+}
+.container .right .h p{
+    margin: 5px;
+    float: right;
+    background: rgba(0, 0, 0, 0.375);
+    padding: 5px;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    transition: 0.5s;
+    transform: scale(1);
+}
+.container .right .h p:active{
+    transform: scale(0.7);
+}
+.banner{
+    width: 63%;
+    min-height: 272px;
+    margin: 5px auto;
+    background: url("https://raw.githubusercontent.com/AonMao888/fontimg/main/send.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 7px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s;
+    animation: ban 10s step-start infinite;
+}
+@keyframes ban{
+    0%{
+        background: url("https://raw.githubusercontent.com/AonMao888/fontimg/main/send.png") no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    50%{
+        background: url("https://raw.githubusercontent.com/AonMao888/fontimg/main/web.png") no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+}
+.banner:hover{
+    transform: scale(0.98);
+}
+.menubtn{
+    display: none;
+}
+.foot{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 51px;
+    flex-wrap: wrap-reverse;
+}
+.foot .link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px 9px;
+    width: fit-content;
+}
+.foot .link a{
+    text-decoration: none;
+    margin: 5px;
+    font-size: 19px;
+    color: dimgray;
+    width: max-content;
+}
+.foot .info{
+    width: 159px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foot .info img{
+    width: 151px;
+    height: 151px;
+    border-radius: 5px;
+    user-select: none;
+}
+.foot .info h1{
+    font-size: 23px;
+}
+.foot .info h1 span{
+    font-size: 19px;
+    background: linear-gradient(159deg,royalblue,blue);
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
 
+@media(max-width:1111px){
+    .banner{
+        width: 88%;
+    }
+    .con a{
+        width: 36%;
+    }
+    .con{
+        flex-wrap: wrap;
+    }
+    .container .left p{
+        width: 88%;
+    }
+}
+@media(max-width:909px){
+    .con a{
+        flex-wrap: wrap;
+        padding: 9px;
+    }
+    .con a span h5{
+        color: #eee;
+    }
+    .container .left h1{
+        font-size: 36px;
+    }
+    .foot .info h1{
+        font-size: 23px;
+    }
+}
+@media(max-width:818px){
+    .banner{
+        min-height: 195px;
+    }
+    .container .right{
+        min-width: 242px;
+    }
+    .container .left h1{
+        font-size: 32px;
+    }
+    .foot .info h1{
+        font-size: 23px;
+    }
+}
 @media(max-width:711px){
     nav .left a h1{
         font-size: 27px;
@@ -76,9 +371,75 @@ nav .right a p{
     nav .right a p{
         display: none;
     }
+    .banner{
+        width: 93%;
+    }
+    .container .right{
+        min-width: 212px;
+    }
+    .con a span h5{
+        display: none;
+    }
 }
-@media(max-width:588px){
+@media(max-width:591px){
     nav{
         justify-content: space-between;
+    }
+    nav .left a h1{
+        display: none;
+    }
+    .menubtn{
+        display: block;
+    }
+    .container .left p{
+        width: 91%;
+    }
+    .container .right{
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        left: -369px;
+        background: #fff;
+        width: 242px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-right: 1px solid rgb(218, 218, 218);
+        transition: 0.5s;
+    }
+    .container .right .h{
+        display: block;
+    }
+    .container .right h3{
+        display: none;
+    }
+    .container .right a{
+        background: transparent;
+    }
+    .container .right a:hover{
+        color: royalblue;
+        transform: translateX(7px);
+    }
+    .container .left h1{
+        font-size: 7vw;
+    }
+    .foot .info h1{
+        font-size: 23px;
+    }
+    .con{
+        flex-wrap: wrap;
+    }
+    .con a{
+        width: 123px;
+        height: 123px;
+        flex-direction: column;
+        border-radius: 50%;
+        justify-content: center;
+    }
+    .con a span{
+        font-size: 15px;
+    }
+    .con a img{
+        width: 63px;
+        height: 63px;
     }
 }

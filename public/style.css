@@ -6,22 +6,43 @@ body{
 .app{
     background: #fff;
     width: 100%;
-    max-width: 429px;
+    max-width: 639px;
     padding: 15px;
-    top: 50%;
-    transform: translateY(50%);
     border-radius: 7px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ani{
+    width: 159px;
+    height: 159px;
+    background: url("assets/gif/sharing.gif");
+    background-size: cover;
+    background-position: center;
 }
 .screen{
     display: none;
 }
-.screen.active{
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.screen .active{
     display: block;
 }
 h2{
     margin: 5px;
     color: royalblue;
     font-size: 29px;
+}
+p{
+    margin: 5px;
+    color: dimgray;
 }
 button{
     border: none;
@@ -32,17 +53,125 @@ button{
     color: #fff;
     font-size: 19px;
     cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1);
+    margin: 15px 0;
+    user-select: none;
+}
+button:hover{
+    color: rgb(209, 209, 209);
+}
+button:active{
+    transform: scale(0.94);
 }
 h3{
-    margin: 5px;
+    margin: 2px;
     color: dimgray;
 }
 span{
     background: #eee;
     color: dimgray;
-    padding: 9px 23px;
+    padding: 7px 23px;
     margin: 5px;
+    border: 2px solid dimgray;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: bold;
 }
 input{
     margin: 15px;
+}
+.qr{
+    width: 151px;
+    height: fit-content;
+    max-height: 151px;
+    object-fit: contain;
+    object-position: center;
+    padding: 9px;
+    border: 3px solid dimgray;
+    border-radius: 4px;
+    user-select: none;
+}
+.file-input{
+    width: 100%;
+    background: #eee;
+    border: 2px dotted dimgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 151px;
+    min-width: 242px;
+    cursor: pointer;
+}
+.file-input p{
+    color: dimgray;
+    font-size: 23px;
+    user-select: none;
+}
+.file-list{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.file-list h1{
+    margin: 4px;
+    color: royalblue;
+}
+.fs-screen{
+    display: flex;
+    flex-direction: row;
+    width: 423px;
+    align-items: center;
+}
+.item{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #eee;
+    padding: 9px 0;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+.item .filename{
+    font-size: 19px;
+    color: royalblue;
+    margin-left: 7px;
+}
+.item .prograss{
+    margin-right: 7px;
+    color: black;
+}
+.form-input input{
+    width: 100%;
+    padding: 5px 9px;
+    border: 2px solid royalblue;
+    border-radius: 4px;
+    color: royalblue;
+    font-size: 16px;
+    outline-color: dimgray;
+    letter-spacing: 3px;
+}
+.screen{
+    display: none;
+}
+.screen.active{
+    display: block;
+}
+
+@media(max-width:688px){
+    .app{
+        flex-direction: column;
+        align-items: center;
+    }
+    .fs-screen{
+        width: 96%;
+    }
+    .qr{
+        width: 96%;
+    }
+    .file-input{
+        height: 99px;
+    }
 }
