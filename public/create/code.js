@@ -1,6 +1,36 @@
 
     let receiverID;
+    const getlang = localStorage.getItem("maisunglang");
+    const p = document.querySelector(".p");
+    const createbtn = document.querySelector(".createbtn");
+    const rid = document.querySelector(".rid");
+    const or = document.querySelector(".or");
+    const scan = document.querySelector(".scan");
+    const choose = document.querySelector(".choose");
+    const shared = document.querySelector(".shared");
     const socket = io();
+
+    //for window loaded
+    window.addEventListener("load",()=>{
+        if(getlang == "tai"){
+            p.innerText = "တဵၵ်းတူမ်ႇတီႈတႂ်ႈၼႆႉတႃႇ သၢင်ႈႁဵတ်းမၢႆၶွင်ႉ";
+            createbtn.innerText = "သၢင်ႈႁဵတ်းမၢႆၶွင်ႉ";
+            rid.innerText = "မၢႆၶွင်ႉ";
+            or.innerText = "___ ဢမ်ႇၼၼ် ___";
+            scan.innerText = "ၽတ်း QR code ၼႆႉတႃႇၵပ်းၶွင်ႉ";
+            choose.innerText = "လိူၵ်ႈၾႆႇ";
+            shared.innerText = "ၾႆႇဢၼ်သူင်ႇဢွၵ်ႇ";
+        }else if(getlang === "eng"){}else if(getlang === "chn"){
+            p.innerText = "按下面的按钮创建房间 ID";
+            createbtn.innerText = "创建房间";
+            rid.innerText = "房间号";
+            or.innerText = "___ 或者 ___";
+            scan.innerText = "扫描二维码加入房间";
+            choose.innerText = "选择文件";
+            shared.innerText = "共享文件";
+        }
+    })
+    //end of window loaded
 
     let generateID = `${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}`
     
@@ -8,7 +38,7 @@
         let joinID = generateID;
         document.querySelector(".p").style.display = "none";
         document.querySelector("#sender-start-con-btn").style.display = "none";
-        document.querySelector("#join-id").innerHTML = `<h3>Room ID</h3><span>${joinID}</span><p>___ or ___</p><img src="https://chart.googleapis.com/chart?cht=qr&chl=${joinID}&chs=260x260&chld=L|0"><p>Send Room Id to the receiver</p>`;
+        document.querySelector("#join-id").innerHTML = `<h3 class="rid">Room ID</h3><span>${joinID}</span><p class="or">___ or ___</p><img src="https://chart.googleapis.com/chart?cht=qr&chl=${joinID}&chs=260x260&chld=L|0"><p class="scan">Scan this qr code to join</p>`;
         socket.emit("sender-join",{
             uid: joinID
         });

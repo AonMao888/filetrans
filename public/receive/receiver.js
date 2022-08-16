@@ -1,6 +1,24 @@
 
     let senderID;
+    const getlang = localStorage.getItem("maisunglang");
+    const enter = document.querySelector(".enter");
+    const joinbtn = document.querySelector(".joinbtn");
+    const received = document.querySelector(".received");
     const socket = io();
+
+    //for window loaded
+    window.addEventListener("load",()=>{
+        if(getlang == "tai"){
+            enter.innerText = "တဵမ်ႈသႂ်ႇမၢႆၶွင်ႉဢၼ်ၵေႃႉတေသူင်ႉမႃးၼၼ်ႉ";
+            joinbtn.innerText = "ၵပ်းၶွင်ႉ";
+            received.innerText = "ၾႆႇဢၼ်ႁပ်ႉလႆႈ";
+        }else if(getlang === "eng"){}else if(getlang === "chn"){
+            enter.innerText = "输入发件人的房间号";
+            joinbtn.innerText = "加入房间";
+            received.innerText = "收到的文件";
+        }
+    })
+    //end of window loaded
 
     let generateID = `${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}-${Math.trunc(Math.random()*999)}`
     
