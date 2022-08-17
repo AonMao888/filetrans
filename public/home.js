@@ -43,7 +43,7 @@ menuclose.addEventListener("click",()=>{
     menubtn.classList.remove("show");
 })
 window.addEventListener("load",()=>{
-    qr.style.display = "block";
+    qr.style.display = "flex";
     getlang = localStorage.getItem("maisunglang");
     console.log(getlang)
     if(getlang){
