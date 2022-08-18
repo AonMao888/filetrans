@@ -9,6 +9,7 @@ const pop = document.querySelector(".pop");
 const tailang = document.querySelector(".tailang");
 const englang = document.querySelector(".englang");
 const chnlang = document.querySelector(".chnlang");
+const clang = document.querySelector(".clang");
 let getlang;
 const ttitle = document.querySelector(".title");
 const des = document.querySelector(".des");
@@ -113,18 +114,27 @@ qrclose.addEventListener("click",()=>{
 changelangbtn.addEventListener("click",()=>{
     pop.style.display = "flex";
 })
+changelangbtn.addEventListener("click",()=>{
+    pop.style.display = "flex";
+})
+clang.addEventListener("click",()=>{
+    pop.style.display = "flex";
+})
 pop.addEventListener("click",()=>{
     pop.style.display = "none";
 })
 tailang.addEventListener("click",()=>{
     localStorage.setItem("maisunglang","tai");
     alert("ဝႅပ်ႉသၢႆႉၼႆႉလိူၵ်ႈၽႃႇသႃႇတႆးယဝ်ႉၶႃႈ");
+    window.location.reload();
 })
 englang.addEventListener("click",()=>{
     localStorage.setItem("maisunglang","eng");
     alert("English language was set as site language");
+    window.location.reload();
 })
 chnlang.addEventListener("click",()=>{
     localStorage.setItem("maisunglang","chn");
     alert("中文被设置为网站语言");
+    window.location.reload();
 })

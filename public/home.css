@@ -298,6 +298,7 @@ nav .right a p{
     font-size: 19px;
     color: dimgray;
     width: max-content;
+    cursor: pointer;
 }
 .foot .info{
     width: 159px;
@@ -376,7 +377,7 @@ nav .right a p{
     align-items: center;
 }
 .lang{
-    width: 100%;
+    width: 93%;
     max-width: 519px;
     background: #fff;
     padding: 15px;
@@ -569,6 +570,7 @@ nav .right a p{
         height: 63px;
     }
     .div{
+        width: 100%;
         background: royalblue;
         margin-bottom: 51px;
     }
@@ -601,5 +603,14 @@ nav .right a p{
     }
     .foot .link a{
         margin: 5px 15px;
+    }
+    .lang{
+        padding: 9px;
+    }
+    .lang .li button{
+        width: 32%;
+    }
+    .lang .li button img{
+        width: 91%;
     }
 }
