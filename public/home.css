@@ -1,7 +1,11 @@
 body{
-    background: #fff;
+    background: var(--background);
     margin: 0;
     padding: 0;
+}
+:root{
+    --color: #333;
+    --background: #fff;
 }
 ::-webkit-scrollbar{
     display: none;
@@ -21,9 +25,10 @@ nav .left{
 }
 nav .left i{
     font-size: 19px;
-    color: #fff;
+    color: var(--background);
     margin: 3px 9px;
     cursor: pointer;
+    outline: none;
     outline: none;
     transform: scale(1);
     transition: 0.5s;
@@ -47,14 +52,14 @@ nav .left a img{
 }
 nav .left a h1{
     font-size: 29px;
-    color: #fff;
+    color: var(--background);
     margin: 5px;
     align-items: center;
     text-align: center;
 }
 nav .left a h1 span{
     font-size: 27px;
-    background: #fff;
+    background: var(--background);
     color: royalblue;
     padding: 5px 8px;
     border-radius: 4px;
@@ -92,7 +97,7 @@ nav .right a:hover p{
 nav .right a p{
     transition: 0.5s;
     margin: 2px;
-    color: #fff;
+    color: var(--background);
 }
 .container{
     width: 100%;
@@ -120,7 +125,7 @@ nav .right a p{
 .container .left p{
     width: 51%;
     margin: 5px auto;
-    color: dimgray;
+    color: var(--color);
     font-size: 19px;
 }
 .container .left h2{
@@ -177,7 +182,7 @@ nav .right a p{
     margin: 5px;
     width: max-content;
     text-align: center;
-    color: #fff;
+    color: var(--background);
     font-weight: bold;
     font-size: 19px;
 }
@@ -194,7 +199,7 @@ nav .right a p{
 }
 .container .right a{
     width: 87%;
-    background: #eee;
+    background: rgba(110, 110, 110, 0.252);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,7 +214,7 @@ nav .right a p{
     color: royalblue;
 }
 .container .right a:nth-child(4){
-    color: #000;
+    color: var(--color);
 }
 .container .right a:nth-child(5){
     color: teal;
@@ -219,7 +224,7 @@ nav .right a p{
 }
 .container .right a p{
     margin: 5px;
-    color: dimgray;
+    color: var(--color);
 }
 .container .right .h{
     background: url("https://raw.githubusercontent.com/AonMao888/fontimg/main/send.png") no-repeat;
@@ -239,7 +244,8 @@ nav .right a p{
     border-radius: 5px;
     user-select: none;
     cursor: pointer;
-    color: #fff;
+    outline: none;
+    color: var(--background);
     outline: none;
     transition: 0.5s;
     transform: scale(1);
@@ -296,7 +302,7 @@ nav .right a p{
     text-decoration: none;
     margin: 5px;
     font-size: 19px;
-    color: dimgray;
+    color: var(--color);
     width: max-content;
     cursor: pointer;
 }
@@ -322,7 +328,7 @@ nav .right a p{
     font-size: 19px;
     background: linear-gradient(159deg,royalblue,blue);
     -webkit-background-clip: unset;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: var(--background);
     padding: 5px;
     border-radius: 5px;
 }
@@ -332,7 +338,7 @@ nav .right a p{
     align-items: center;
 }
 .qr{
-    background: #fff;
+    background: var(--background);
     border: 1px solid rgb(211, 211, 211);
     display: flex;
     flex-direction: column;
@@ -353,7 +359,7 @@ nav .right a p{
     right: 0;
     margin: 5px;
     font-size: 17px;
-    color: dimgray;
+    color: var(--color);
 }
 .qr img{
     width: 99px;
@@ -362,7 +368,7 @@ nav .right a p{
 }
 .qr p{
     margin: 5px;
-    color: dimgray;
+    color: var(--color);
 }
 .pop{
     width: 100vw;
@@ -379,7 +385,7 @@ nav .right a p{
 .lang{
     width: 93%;
     max-width: 519px;
-    background: #fff;
+    background: var(--background);
     padding: 15px;
     border-radius: 5px;
 }
@@ -390,7 +396,7 @@ nav .right a p{
 }
 .lang p{
     margin: 5px;
-    color: dimgray;
+    color: var(--color);
     font-size: 17px;
 }
 .lang .li{
@@ -419,10 +425,15 @@ nav .right a p{
     object-fit: cover;
     object-position: center;
     border-radius: 4px;
+    object-fit: contain;
+    object-position: center;
 }
 .lang .li button p{
     margin: 5px;
-    color: dimgray;
+    width: 100%;
+    text-align: center;
+    width: max-content;
+    color: var(--color);
 }
 
 @media(max-width:1111px){
@@ -445,7 +456,7 @@ nav .right a p{
         padding: 9px;
     }
     .con a span h5{
-        color: #eee;
+        color: var(--background);
     }
     .container .left h1{
         font-size: 36px;
@@ -503,7 +514,7 @@ nav .right a p{
         top: 0;
         height: 100vh;
         left: -369px;
-        background: #fff;
+        background: var(--background);
         width: 242px;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -580,7 +591,7 @@ nav .right a p{
         -webkit-text-fill-color: transparent;
     }
     .container .left p{
-        color: #eee;
+        color: var(--background);
     }
     .c{
         display: none;
@@ -607,10 +618,20 @@ nav .right a p{
     .lang{
         padding: 9px;
     }
+    .lang .li{
+        flex-direction: column;
+        width: 99%;
+    }
     .lang .li button{
-        width: 32%;
+        width: 99%;
+        margin: 4px 0;
+        flex-direction: row;
     }
     .lang .li button img{
-        width: 91%;
+        height: 51px;
+        width: 63px;
+    }
+    .lang .li button p{
+        width: 100%;
     }
 }

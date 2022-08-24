@@ -4,6 +4,7 @@
     const enter = document.querySelector(".enter");
     const joinbtn = document.querySelector(".joinbtn");
     const received = document.querySelector(".received");
+    const getdl = localStorage.getItem("maidl");
     const socket = io();
 
     //for window loaded
@@ -69,3 +70,10 @@
             });
         }
     })
+    if(getdl === "light"){
+        document.documentElement.style.setProperty("--color","#333");
+        document.documentElement.style.setProperty("--background","#fff");
+    }else{
+        document.documentElement.style.setProperty("--color","#fff");
+        document.documentElement.style.setProperty("--background","#333");
+    }

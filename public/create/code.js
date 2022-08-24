@@ -8,6 +8,7 @@
     const scan = document.querySelector(".scan");
     const choose = document.querySelector(".choose");
     const shared = document.querySelector(".shared");
+    const getdl = localStorage.getItem("maidl");
     const socket = io();
 
     //for window loaded
@@ -87,4 +88,12 @@
                 }
             })
         }
-    })
+    });
+
+    if(getdl === "light"){
+        document.documentElement.style.setProperty("--color","#333");
+        document.documentElement.style.setProperty("--background","#fff");
+    }else{
+        document.documentElement.style.setProperty("--color","#fff");
+        document.documentElement.style.setProperty("--background","#333");
+    }

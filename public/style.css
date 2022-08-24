@@ -1,10 +1,15 @@
+:root{
+    --color:#333;
+    --background:#fff;
+}
 body{
-    background: #eee;
+    background: var(--background);
     display: flex;
     justify-content: center;
+    background: var(--background);
 }
 .app{
-    background: #fff;
+    background: rgba(99, 99, 99, 0.382);
     width: 100%;
     max-width: 639px;
     padding: 15px;
@@ -42,7 +47,7 @@ h2{
 }
 p{
     margin: 5px;
-    color: dimgray;
+    color: var(--color);
 }
 button{
     border: none;
@@ -50,7 +55,7 @@ button{
     padding: 9px 19px;
     border-radius: 51px;
     background: royalblue;
-    color: #fff;
+    color: var(--background);
     font-size: 19px;
     cursor: pointer;
     transition: 0.5s;
@@ -66,14 +71,14 @@ button:active{
 }
 h3{
     margin: 2px;
-    color: dimgray;
+    color: var(--color);
 }
 span{
-    background: #eee;
-    color: dimgray;
+    background: rgba(99, 99, 99, 0.377);
+    color: var(--color);
     padding: 7px 23px;
     margin: 5px;
-    border: 2px solid dimgray;
+    border: 2px solid var(--color);
     border-radius: 5px;
     font-size: 19px;
     font-weight: bold;
@@ -88,14 +93,14 @@ input{
     object-fit: contain;
     object-position: center;
     padding: 9px;
-    border: 3px solid dimgray;
+    border: 3px solid var(--color);
     border-radius: 4px;
     user-select: none;
 }
 .file-input{
     width: 100%;
-    background: #eee;
-    border: 2px dotted dimgray;
+    background: var(--background);
+    border: 2px dotted --color;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -105,7 +110,7 @@ input{
     cursor: pointer;
 }
 .file-input p{
-    color: dimgray;
+    color: var(--color);
     font-size: 23px;
     user-select: none;
 }
@@ -129,7 +134,7 @@ input{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background: #eee;
+    background: var(--background);
     padding: 9px 0;
     border-radius: 4px;
     margin-top: 5px;
@@ -145,7 +150,7 @@ input{
 }
 .item .prograss{
     margin-right: 7px;
-    color: black;
+    color: var(--color);
 }
 .form-input input{
     width: 100%;
@@ -154,7 +159,7 @@ input{
     border-radius: 4px;
     color: royalblue;
     font-size: 16px;
-    outline-color: dimgray;
+    outline-color: var(--color);
     letter-spacing: 3px;
 }
 .screen{

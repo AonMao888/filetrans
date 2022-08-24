@@ -34,6 +34,7 @@ const clangr = document.querySelector(".clangr");
 const invite = document.querySelector(".invite");
 const st = document.querySelector(".st");
 const sdes = document.querySelector(".sdes");
+const getdl = localStorage.getItem("maidl");
 
 menubtn.addEventListener("click",()=>{
     menu.style.left = "0";
@@ -138,3 +139,29 @@ chnlang.addEventListener("click",()=>{
     alert("中文被设置为网站语言");
     window.location.reload();
 })
+if(getdl === "light"){
+    document.documentElement.style.setProperty("--color","#333");
+    document.documentElement.style.setProperty("--background","#fff");
+}else{
+    document.documentElement.style.setProperty("--color","#fff");
+    document.documentElement.style.setProperty("--background","#333");
+}
+function dl(){
+    let mp3 = new Audio("assets/dl.wav");
+    mp3.play();
+    if(getdl){
+        if(getdl === "light"){
+            document.documentElement.style.setProperty("--color","#fff");
+            document.documentElement.style.setProperty("--background","#333");
+            localStorage.setItem("maidl","dark");
+            window.location.reload();
+        }else{
+            document.documentElement.style.setProperty("--color","#333");
+            document.documentElement.style.setProperty("--background","#fff");
+            localStorage.setItem("maidl","light");
+            window.location.reload();
+        }
+    }else{
+        localStorage.setItem("maidl","light");
+    }
+}
